@@ -17,6 +17,7 @@ class _BmiCalculatorState extends State<BmiCalculator> {
       body: Padding(
         padding: const EdgeInsets.all(12.0),
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             TextField(
               keyboardType: TextInputType.number,
@@ -47,7 +48,25 @@ class _BmiCalculatorState extends State<BmiCalculator> {
                   borderRadius: BorderRadius.circular(10),
                 ),
               ),
-            )
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+            ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10)),
+                  backgroundColor: Colors.blue,
+                  fixedSize: Size(MediaQuery.sizeOf(context).width, 50),
+                ),
+                onPressed: () {},
+                child: const Text(
+                  "Calculate BMI",
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 17,
+                      fontWeight: FontWeight.bold),
+                ))
           ],
         ),
       ),
